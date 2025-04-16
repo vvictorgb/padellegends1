@@ -35,7 +35,8 @@
           <div>
             <label>
               <i class='bx bx-envelope'></i>
-              <input type="email" name="email" placeholder="Correo Electrónico" value="{{ old('email') }}" required>
+              <input type="email" name="email" placeholder="Correo Electrónico" value="{{ old('email') }}" required
+              style="background-color: white !important; box-shadow: 0 0 0 1000px white inset !important;">
             </label>
           </div>
           <div>
@@ -73,13 +74,14 @@
           <div>
             <label>
               <i class='bx bx-user'></i>
-              <input type="text" name="name" placeholder="Nombre Usuario" value="{{ old('name') }}" required>
+              <input type="text" name="name" placeholder="Nombre Usuario" value="{{ old('name') }}" required style="background-color: white !important; box-shadow: 0 0 0 1000px white inset !important;">
             </label>
           </div>
           <div>
             <label>
               <i class='bx bx-envelope'></i>
-              <input type="email" name="email" placeholder="Correo Electrónico" value="{{ old('email') }}" required>
+              <input type="email" name="email" placeholder="Correo Electrónico" value="{{ old('email') }}" required
+              style="background-color: white !important; box-shadow: 0 0 0 1000px white inset !important;">
             </label>
           </div>
           <div>

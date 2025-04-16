@@ -359,15 +359,9 @@ strong {
 .hero {
   position: relative;
   height: calc(100vh - 133px);
-  -webkit-mask-image: linear-gradient(to bottom, white 80%, black);
-  mask-image: linear-gradient(to bottom, white 80%, black);
-  mask-mode: luminance;
 }
 
 .section-hero {
-  -webkit-mask-image: linear-gradient(to bottom, white 80%, black);
-  mask-image: linear-gradient(to bottom, white 80%, black);
-  mask-mode: luminance;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1284,4 +1278,8 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px;
   }
+}
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
 }
