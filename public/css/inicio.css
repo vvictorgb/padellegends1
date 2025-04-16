@@ -359,10 +359,15 @@ strong {
 .hero {
   position: relative;
   height: calc(100vh - 133px);
+  -webkit-mask-image: linear-gradient(to bottom, white 80%, black);
+  mask-image: linear-gradient(to bottom, white 80%, black);
+  mask-mode: luminance;
 }
 
 .section-hero {
-  background-image: url("");
+  -webkit-mask-image: linear-gradient(to bottom, white 80%, black);
+  mask-image: linear-gradient(to bottom, white 80%, black);
+  mask-mode: luminance;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -374,7 +379,6 @@ strong {
 
 .section-hero::before {
   content: "";
-  background: linear-gradient(to top, var(--dark-color), transparent 90%);
   position: absolute;
   top: 0;
   right: 0;

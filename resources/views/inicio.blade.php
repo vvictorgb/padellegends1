@@ -27,7 +27,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
 
 </head>
@@ -46,10 +47,10 @@
 
                 <div class="col-lg-2 col-md-3 col-5">
                     <p class="text-white mb-0">
-                        <a href="tel:681124828" class="text-white">
+
                             <i class="bi-telephone site-header-icon me-2"></i>
                             681124820
-                        </a>
+
 
                     </p>
                 </div>
@@ -72,23 +73,9 @@
 
     <nav class="navbar navbar-expand-lg bg-white shadow-lg">
         <div class="container">
-
             <a href="#">
-                <div
-                    style="
-                    width: 100px;
-                    height: 80px;
-                    background-image: url('{{ asset('images/logo.png') }}');
-                    background-size: cover;
-                    background-position: center;
-
-
-                ">
-                </div>
+                <div style="width: 100px; height: 80px; background-image: url('{{ asset('images/logo.png') }}'); background-size: cover; background-position: center;"></div>
             </a>
-
-
-
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,54 +85,53 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_1"><small class="small-title"><strong
-                                    class="text-warning">01</strong></small> Home</a>
+                        <a class="nav-link click-scroll" href="#section_1">
+                            <small class="small-title"><strong class="text-warning">01</strong></small> Inicio
+                        </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_2"><small class="small-title"><strong
-                                    class="text-warning">02</strong></small> About</a>
+                        <a class="nav-link click-scroll" href="#section_2">
+                            <small class="small-title"><strong class="text-warning">02</strong></small> Sobre Nosotros
+                        </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_3"><small class="small-title"><strong
-                                    class="text-warning">03</strong></small> Services</a>
+                        <a class="nav-link click-scroll" href="#section_3">
+                            <small class="small-title"><strong class="text-warning">03</strong></small> Instalaciones
+                        </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4"><small class="small-title"><strong
-                                    class="text-warning">04</strong></small> Projects</a>
+                        <a class="nav-link click-scroll" href="#section_4">
+                            <small class="small-title"><strong class="text-warning">04</strong></small> Mi Club
+                        </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_5"><small class="small-title"><strong
-                                    class="text-warning">05</strong></small> Contact</a>
+                        <a class="nav-link click-scroll" href="#section_5">
+                            <small class="small-title"><strong class="text-warning">05</strong></small> Contacto
+                        </a>
                     </li>
                 </ul>
-
-
-                </div>
+            </div>
+        </div>
     </nav>
+
 
     <main>
 
-        <section class="hero">
-            <div class="container-fluid h-100">
-                <div class="row h-100">
-                    <div id="carouselExampleCaptions" class="carousel carousel-fade hero-carousel slide"
+        <section class="hero" style="height: 100vh; overflow: hidden;">
+            <div class="container-fluid h-100 p-0">
+                <div class="row h-100 m-0">
+                    <div id="carouselExampleCaptions" class="carousel carousel-fade hero-carousel slide w-100 h-100"
                         data-bs-ride="carousel">
-                        <div class="carousel-inner">
+                        <div class="carousel-inner h-100">
                             <!-- Primer Item -->
-                            <div class="carousel-item active">
+                            <div class="carousel-item active h-100">
                                 <div class="container position-relative h-100">
-                                    <div class="carousel-caption d-flex flex-column justify-content-center">
-                                        <small class="small-title">CLUB PADEL LEGENDS <strong
-                                                class="text-warning">01/05</strong></small>
-                                        <h1>Elevate your game with <span class="text-warning">Next-Level Padel</span>
-                                        </h1>
+                                    <div class="carousel-caption d-flex flex-column justify-content-center ">
+                                        <small class="small-title">CLUB PADEL LEGENDS <strong class="text-warning">01/05</strong></small>
+                                        <h1>Elevate your game with <span class="text-warning">Next-Level Padel</span></h1>
                                         <div class="d-flex align-items-center mt-4">
                                             <a class="custom-btn btn custom-link" href="#section_2"
-                                                style="background-color:#34ecec ">Más Información</a>
+                                                style="background-color:#34ecec">Más Información</a>
                                             <a class="popup-youtube custom-icon d-flex ms-4"
                                                 href="https://www.youtube.com/watch?v=rRzr-5GP7J8">
                                                 <i class="bi-play play-icon d-flex m-auto text-white"></i>
@@ -153,8 +139,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-image-wrap">
-                                    <img src="{{ asset('images/slice1.jpg') }}" class="d-block w-100" alt="Imagen 1"
+                                <div class="carousel-image-wrap position-absolute top-0 start-0 w-100 h-100">
+                                    <img src="{{ asset('images/slice1.jpg') }}" class="d-block w-100 h-100" alt="Imagen 1"
                                         style="object-fit: cover;">
                                 </div>
                             </div>
@@ -163,6 +149,7 @@
                 </div>
             </div>
         </section>
+
 
 
 
@@ -190,7 +177,7 @@
                         <div class="about-thumb bg-white shadow-lg">
 
                             <div class="about-info">
-                                <small class="small-title">About <strong class="text-warning"> 02/05</strong></small>
+                                <small class="small-title">Sobre Nosotros <strong class="text-warning"> 02/05</strong></small>
 
                                 <h2 class="mb-3">Conectando Pasiones</h2>
 
@@ -339,28 +326,21 @@
                 <div class="row">
 
                     <div class="col-lg-10 col-12 text-center mx-auto mb-5">
-                        <small class="small-title">Projects <strong class="text-warning">04/05</strong></small>
-
-                        <h2>Brands we've crafted so far</h2>
+                        <small class="small-title">Mi Club <strong class="text-warning">04/05</strong></small>
+                        <h2>Mi Espacio Pádel</h2>
                     </div>
 
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
                             <a href="project-detail.html">
-                                <img src="images/projects/pj-gal-szabo-CIXXIWxxec4-unsplash.jpg"
-                                    class="img-fluid projects-image" alt="">
-
+                                <img src="{{ asset('images/perfil.jpg') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
-                                        <small class="projects-small-title">Business</small>
-
-                                        <h2 class="projects-title">MCL Group</h2>
+                                        <small class="projects-small-title"><i class="bi-person-circle"></i></small>
+                                        <h2 class="projects-title">Perfil Jugador</h2>
                                     </div>
-
                                     <div class="projects-btn-wrap mt-4">
-                                        <span class="custom-btn btn">
-                                            <i class="bi-arrow-right"></i>
-                                        </span>
+                                        <span class="custom-btn btn"><i class="bi-arrow-right"></i></span>
                                     </div>
                                 </div>
                             </a>
@@ -370,20 +350,14 @@
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
                             <a href="project-detail.html">
-                                <img src="images/projects/team-fredi-FN3vmVee2sI-unsplash.jpg"
-                                    class="img-fluid projects-image" alt="">
-
+                                <img src="{{ asset('images/ranking.jpg') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
-                                        <small class="projects-small-title">Strategy Planning</small>
-
-                                        <h2 class="projects-title">Fredi</h2>
+                                        <small class="projects-small-title"><i class="bi-trophy"></i></small>
+                                        <h2 class="projects-title">Ranking</h2>
                                     </div>
-
                                     <div class="projects-btn-wrap mt-4">
-                                        <span class="custom-btn btn" href="project-detail.html">
-                                            <i class="bi-arrow-right"></i>
-                                        </span>
+                                        <span class="custom-btn btn"><i class="bi-arrow-right"></i></span>
                                     </div>
                                 </div>
                             </a>
@@ -392,21 +366,15 @@
 
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
-                            <a href="project-detail.html">
-                                <img src="images/projects/vmsign-x9yGe7wnvKQ-unsplash.jpg"
-                                    class="img-fluid projects-image" alt="">
-
+                            <a href="https://maps.google.com?q=Padel+Club+Valencia" target="_blank">
+                                <img src="{{ asset('images/llegar.jpg') }}" class="img-fluid projects-image projects-image-short" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
-                                        <small class="projects-small-title">Video Content</small>
-
-                                        <h2 class="projects-title">Banana</h2>
+                                        <small class="projects-small-title"><i class="bi-geo-alt-fill"></i></small>
+                                        <h2 class="projects-title">Cómo Llegar</h2>
                                     </div>
-
                                     <div class="projects-btn-wrap mt-4">
-                                        <span class="custom-btn btn" href="project-detail.html">
-                                            <i class="bi-arrow-right"></i>
-                                        </span>
+                                        <span class="custom-btn btn"><i class="bi-arrow-right"></i></span>
                                     </div>
                                 </div>
                             </a>
@@ -416,20 +384,14 @@
                     <div class="col-lg-8 col-12">
                         <div class="projects-thumb projects-thumb-large">
                             <a href="project-detail.html">
-                                <img src="images/projects/evangeline-shaw-nwLTVwb7DbU-unsplash.jpg"
-                                    class="img-fluid projects-image" alt="">
-
+                                <img src="{{ asset('images/reservar.jpg') }}" class="img-fluid projects-image projects-image-short" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
-                                        <small class="projects-small-title">Video Content</small>
-
-                                        <h2 class="projects-title">Conference</h2>
+                                        <small class="projects-small-title"><i class="bi-calendar-check"></i></small>
+                                        <h2 class="projects-title">Reserva tu Pista</h2>
                                     </div>
-
                                     <div class="projects-btn-wrap mt-4">
-                                        <span class="custom-btn btn" href="project-detail.html">
-                                            <i class="bi-arrow-right"></i>
-                                        </span>
+                                        <span class="custom-btn btn"><i class="bi-arrow-right"></i></span>
                                     </div>
                                 </div>
                             </a>
@@ -439,20 +401,14 @@
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
                             <a href="project-detail.html">
-                                <img src="images/projects/tangerine-newt-AKH4OVEmILc-unsplash.jpg"
-                                    class="img-fluid projects-image" alt="">
-
+                                <img src="{{ asset('images/abiertas.jpg') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
-                                        <small class="projects-small-title">Business</small>
-
-                                        <h2 class="projects-title">Maldon</h2>
+                                        <small class="projects-small-title"><i class="bi-people-fill"></i></small>
+                                        <h2 class="projects-title" style="font-size: 35px">Partidas Abiertas</h2>
                                     </div>
-
                                     <div class="projects-btn-wrap mt-4">
-                                        <span class="custom-btn btn" href="project-detail.html">
-                                            <i class="bi-arrow-right"></i>
-                                        </span>
+                                        <span class="custom-btn btn"><i class="bi-arrow-right"></i></span>
                                     </div>
                                 </div>
                             </a>
@@ -462,6 +418,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <section class="contact" id="section_5">
 
@@ -505,25 +463,26 @@
                             <div class="contact-thumb">
 
                                 <div class="contact-info bg-white shadow-lg">
-                                    <h4 class="mb-4">1340 Atwater St, Detroit, MI 48207</h4>
+                                    <h4 class="mb-4">Calle Unidad de Ejecución, 7, 46185 La Pobla de Vallbona</h4>
 
                                     <h4 class="mb-2">
 
-                                            240-480-9600
+                                            962738877
 
                                     </h4>
 
                                     <h5>
-
-                                            info@company.com
+                                            padellegends2@gmail.com
                                         </a>
                                     </h5>
 
                                     <!-- Copy "embed a map" HTML code from any point on Google Maps -> Share Link  -->
 
                                     <iframe class="google-map mt-4"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4063.103580426464!2d-83.0264337484065!3d42.33402597908653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2cce05ddf4f1%3A0xcc0559eb3fda00c9!2sDetroit%20Riverwalk%2C%20Detroit%2C%20MI!5e1!3m2!1sen!2sus!4v1657814406289!5m2!1sen!2sus"
-                                        width="100%" height="300" allowfullscreen="" loading="lazy"></iframe>
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.2331643349466!2d-0.561123!3d39.584375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604ea4a8c9f4b1%3A0x46fef00ae48600f9!2sP%C3%A1del%20Club%20Valencia!5e0!3m2!1ses!2ses!4v1713281924213!5m2!1ses!2ses"
+    width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 
                                 </div>
                             </div>
@@ -542,7 +501,7 @@
 
                 <div class="col-lg-6 col-12">
                     <div class="site-footer-wrap d-flex align-items-center">
-                        <p class="copyright-text mb-0 me-4">Copyright © 2036 Waso Strategy Co., Ltd.</p>
+                        <p class="copyright-text mb-0 me-4">© 2025 Padel Legends. Todos los derechos reservados.</p>
 
                         <ul class="social-icon">
                             <li><a href="https://facebook.com/tooplate" class="social-icon-link bi-facebook"></a></li>
@@ -560,8 +519,8 @@
                 </div>
 
                 <div class="col-lg-6 col-12">
-                    <p class="copyright-text mb-0 me-4">Waso HTML Template is designed by <a
-                            href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
+                    <p class="copyright-text mb-0 me-4">Tu club de pádel en Valencia. Vive la pasión por el deporte, compite, mejora y haz comunidad.
+
                 </div>
 
             </div>

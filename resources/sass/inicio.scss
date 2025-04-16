@@ -368,7 +368,6 @@
   }
 
   .section-hero {
-    background-image: url('');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -380,7 +379,7 @@
 
   .section-hero::before {
     content: "";
-    background: linear-gradient(to top, var(--dark-color), transparent 90%);
+
     position: absolute;
     top: 0;
     right: 0;
