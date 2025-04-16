@@ -991,7 +991,7 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("__webpack_require__(/*! ./bootstrap */ \"./resources/js/bootstrap.js\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYXBwLmpzIiwibWFwcGluZ3MiOiJBQUFBQSxtQkFBTyxDQUFDLGdEQUFhLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYXBwLmpzP2NlZDYiXSwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnLi9ib290c3RyYXAnKTtcblxuXG4iXSwibmFtZXMiOlsicmVxdWlyZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
+eval("__webpack_require__(/*! ./bootstrap */ \"./resources/js/bootstrap.js\");\nvar btnSignIn = document.getElementById(\"sign-in\"),\n  btnSignUp = document.getElementById(\"sign-up\"),\n  containerFormRegister = document.querySelector(\".register\"),\n  containerFormLogin = document.querySelector(\".login\");\nbtnSignIn.addEventListener(\"click\", function () {\n  containerFormRegister.classList.add(\"hide\");\n  containerFormLogin.classList.remove(\"hide\");\n});\nbtnSignUp.addEventListener(\"click\", function () {\n  containerFormLogin.classList.add(\"hide\");\n  containerFormRegister.classList.remove(\"hide\");\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYXBwLmpzIiwibWFwcGluZ3MiOiJBQUFBQSxtQkFBTyxDQUFDLGdEQUFhLENBQUM7QUFDdEIsSUFBTUMsU0FBUyxHQUFHQyxRQUFRLENBQUNDLGNBQWMsQ0FBQyxTQUFTLENBQUM7RUFDMUNDLFNBQVMsR0FBR0YsUUFBUSxDQUFDQyxjQUFjLENBQUMsU0FBUyxDQUFDO0VBQzlDRSxxQkFBcUIsR0FBR0gsUUFBUSxDQUFDSSxhQUFhLENBQUMsV0FBVyxDQUFDO0VBQzNEQyxrQkFBa0IsR0FBR0wsUUFBUSxDQUFDSSxhQUFhLENBQUMsUUFBUSxDQUFDO0FBRTNETCxTQUFTLENBQUNPLGdCQUFnQixDQUFDLE9BQU8sRUFBRSxZQUFNO0VBQ3hDSCxxQkFBcUIsQ0FBQ0ksU0FBUyxDQUFDQyxHQUFHLENBQUMsTUFBTSxDQUFDO0VBQzNDSCxrQkFBa0IsQ0FBQ0UsU0FBUyxDQUFDRSxNQUFNLENBQUMsTUFBTSxDQUFDO0FBQzdDLENBQUMsQ0FBQztBQUVGUCxTQUFTLENBQUNJLGdCQUFnQixDQUFDLE9BQU8sRUFBRSxZQUFNO0VBQ3hDRCxrQkFBa0IsQ0FBQ0UsU0FBUyxDQUFDQyxHQUFHLENBQUMsTUFBTSxDQUFDO0VBQ3hDTCxxQkFBcUIsQ0FBQ0ksU0FBUyxDQUFDRSxNQUFNLENBQUMsTUFBTSxDQUFDO0FBQ2hELENBQUMsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9qcy9hcHAuanM/Y2VkNiJdLCJzb3VyY2VzQ29udGVudCI6WyJyZXF1aXJlKCcuL2Jvb3RzdHJhcCcpO1xuY29uc3QgYnRuU2lnbkluID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJzaWduLWluXCIpLFxuICAgICAgICAgIGJ0blNpZ25VcCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwic2lnbi11cFwiKSxcbiAgICAgICAgICBjb250YWluZXJGb3JtUmVnaXN0ZXIgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlZ2lzdGVyXCIpLFxuICAgICAgICAgIGNvbnRhaW5lckZvcm1Mb2dpbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIubG9naW5cIik7XG5cbiAgICBidG5TaWduSW4uYWRkRXZlbnRMaXN0ZW5lcihcImNsaWNrXCIsICgpID0+IHtcbiAgICAgIGNvbnRhaW5lckZvcm1SZWdpc3Rlci5jbGFzc0xpc3QuYWRkKFwiaGlkZVwiKTtcbiAgICAgIGNvbnRhaW5lckZvcm1Mb2dpbi5jbGFzc0xpc3QucmVtb3ZlKFwiaGlkZVwiKTtcbiAgICB9KTtcblxuICAgIGJ0blNpZ25VcC5hZGRFdmVudExpc3RlbmVyKFwiY2xpY2tcIiwgKCkgPT4ge1xuICAgICAgY29udGFpbmVyRm9ybUxvZ2luLmNsYXNzTGlzdC5hZGQoXCJoaWRlXCIpO1xuICAgICAgY29udGFpbmVyRm9ybVJlZ2lzdGVyLmNsYXNzTGlzdC5yZW1vdmUoXCJoaWRlXCIpO1xuICAgIH0pO1xuXG5cbiJdLCJuYW1lcyI6WyJyZXF1aXJlIiwiYnRuU2lnbkluIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCIsImJ0blNpZ25VcCIsImNvbnRhaW5lckZvcm1SZWdpc3RlciIsInF1ZXJ5U2VsZWN0b3IiLCJjb250YWluZXJGb3JtTG9naW4iLCJhZGRFdmVudExpc3RlbmVyIiwiY2xhc3NMaXN0IiwiYWRkIiwicmVtb3ZlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
 
 /***/ }),
 
@@ -1013,6 +1013,17 @@ eval("window._ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodas
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2NzcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2Nzcz9hODBiIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/app.scss\n");
+
+/***/ }),
+
+/***/ "./resources/sass/inicio.scss":
+/*!************************************!*\
+  !*** ./resources/sass/inicio.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9pbmljaW8uc2NzcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9pbmljaW8uc2Nzcz9mNmJhIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/inicio.scss\n");
 
 /***/ })
 
@@ -1139,7 +1150,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"css/app": 0
+/******/ 			"css/app": 0,
+/******/ 			"css/inicio": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1189,8 +1201,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/inicio"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/inicio"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/inicio"], () => (__webpack_require__("./resources/sass/inicio.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
