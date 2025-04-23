@@ -13,7 +13,7 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     * Los atributos que se pueden asignar masivamente.
      *
      * @var array<int, string>
      */
@@ -21,10 +21,19 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'movil',
+        'direccion',
+        'sexo',
+        'lado',
+        'nivel',
+        'racha_victorias',
+        'puntos',
+        'victorias',
+        'derrotas',
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * Atributos ocultos para arrays.
      *
      * @var array<int, string>
      */
@@ -34,11 +43,21 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast.
+     * Atributos que deben castearse.
      *
      * @var array<string, string>
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Relación con partidas (many-to-many).
+     */
+    public function partidas()
+    {
+        return $this->belongsToMany(Partida::class)
+                    ->withPivot('resultado')
+                    ->withTimestamps();
+    }
 }

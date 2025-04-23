@@ -35,6 +35,8 @@ class CreateUsersTable extends Migration
 
             $table->integer('victorias')->default(0);
             $table->integer('derrotas')->default(0);
+            $table->enum('rol', ['admin', 'jugador'])->default('jugador');
+
 
             $table->rememberToken();
             $table->timestamps();

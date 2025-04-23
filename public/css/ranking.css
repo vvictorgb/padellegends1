@@ -1,0 +1,124 @@
+@charset "UTF-8";
+body {
+  background: #e3f2fd;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ranking-card {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.ranking-header {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* COLORES POR NIVEL */
+/* Nivel 7.0 - Master */
+.bg-nivel-7 {
+  background: #311b92;
+  color: white;
+}
+
+/* Nivel 6.75 / 6.5 - Diamante */
+.bg-nivel-6_75,
+.bg-nivel-6_5 {
+  background: #4527a0;
+  color: white;
+}
+
+/* Nivel 6.25 / 6.0 - Platino */
+.bg-nivel-6_25,
+.bg-nivel-6 {
+  background: #1565c0;
+  color: white;
+}
+
+/* Nivel 5.75 / 5.5 - Oro */
+.bg-nivel-5_75,
+.bg-nivel-5_5 {
+  background: #0277bd;
+  color: white;
+}
+
+/* Nivel 5.25 / 5.0 - Plata */
+.bg-nivel-5_25,
+.bg-nivel-5 {
+  background: #0288d1;
+  color: white;
+}
+
+/* Nivel 4.75 / 4.5 / 4.25 / 4.0 - Bronce */
+.bg-nivel-4_75,
+.bg-nivel-4_5,
+.bg-nivel-4_25,
+.bg-nivel-4 {
+  background: #4dd0e1;
+  color: #000;
+}
+
+/* Nivel 3.75 → 2.5 - Base */
+.bg-nivel-3_75,
+.bg-nivel-3_5,
+.bg-nivel-3_25,
+.bg-nivel-3,
+.bg-nivel-2_75,
+.bg-nivel-2_5 {
+  background: #b2ebf2;
+  color: #000;
+}
+
+/* TABLA DE DATOS */
+.ranking-table th {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  text-align: center;
+  color: inherit;
+}
+
+.ranking-table td {
+  text-align: center;
+  font-size: 0.95rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .ranking-header {
+    font-size: 1.2rem;
+  }
+  .ranking-card {
+    padding: 15px;
+  }
+  .ranking-table th,
+  .ranking-table td {
+    font-size: 0.85rem;
+  }
+}
+.ranking-topbar {
+  background-color: #1565c0; /* azul fuerte deportivo */
+}
+
+#flecha {
+  width: 42px;
+  height: 42px;
+  border-width: 2px;
+  transition: 0.2s;
+}
+
+#flecha:hover {
+  background-color: #0d47a1;
+  color: white;
+}
+
+.ranking-logo {
+  height: 32px;
+  vertical-align: middle;
+}
