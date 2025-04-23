@@ -15,10 +15,27 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+
+
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+
+            $table->string('movil')->nullable();
+            $table->string('direccion')->nullable();
+            $table->enum('sexo', ['masculino', 'femenino','otro'])->nullable();
+            $table->enum('lado', ['derecha', 'reves'])->nullable();
+
+
+            $table->float('nivel')->default(2.5);
+            $table->integer('racha_victorias')->default(0);
+            $table->integer('puntos')->default(50);
+
+            $table->integer('victorias')->default(0);
+            $table->integer('derrotas')->default(0);
+
             $table->rememberToken();
             $table->timestamps();
         });

@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8";
+
 /*!
  * Bootstrap  v5.3.5 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -11989,7 +11989,6 @@ body {
   display: flex;
   border-radius: 20px;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
-  height: 500px;
   max-width: 900px;
   transition: all 1s ease;
   margin: 10px;

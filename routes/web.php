@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,3 +34,13 @@ Route::get('/inicio', function () {
 
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
+
+
+
+
+
+Route::get('/perfil', [UserController::class, 'show'])->name('users.show');
+Route::get('/editar-perfil', [UserController::class, 'edit'])->name('users.edit');
+Route::put('/editar-perfil', [UserController::class, 'update'])->name('users.update');
+Route::delete('/eliminar-perfil', [UserController::class, 'destroy'])->name('users.destroy');
