@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Models\Partida;
 
-class PartidaAbierta extends Mailable
+class PartidaAbierta extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -22,6 +22,6 @@ class PartidaAbierta extends Mailable
     public function build()
     {
         return $this->subject('🆕 ¡Nueva partida abierta en tu nivel!')
-            ->view('emails.partida_abierta');
+                    ->view('emails.partida_abierta');
     }
 }

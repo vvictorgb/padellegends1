@@ -16,7 +16,7 @@
 <body>
     <div class="ranking-topbar d-flex align-items-center justify-content-between px-4 py-3 mb-4">
         {{-- Botón volver --}}
-        <a href="{{ url('/inicio') }}" id="flecha" class="d-inline-flex align-items-center justify-content-center rounded-circle border bg-white text-dark">
+        <a href="{{ url('/') }}" id="flecha" class="d-inline-flex align-items-center justify-content-center rounded-circle border bg-white text-dark">
             <i class="bi bi-arrow-left fs-4"></i>
         </a>
 

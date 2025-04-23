@@ -16,7 +16,7 @@
     <div class="container">
         <div class="main-body">
             <div class="mb-4">
-                <a href="{{ url('/inicio') }}" id="flecha" class="d-inline-flex align-items-center justify-content-center rounded-circle border">
+                <a href="{{ url('/') }}" id="flecha" class="d-inline-flex align-items-center justify-content-center rounded-circle border">
                     <i class="bi bi-arrow-left"></i>
                 </a>
             </div>

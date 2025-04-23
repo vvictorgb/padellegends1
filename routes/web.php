@@ -18,7 +18,7 @@ use App\Http\Controllers\RankingController;
 */
 
 
-Route::get('/', [LoginController::class, 'loginForm'])->name('loginForm');
+Route::get('/login', [LoginController::class, 'loginForm'])->name('loginForm');
 
 
 Route::get('/registro', [LoginController::class, 'registerForm'])->name('registerForm');
@@ -30,7 +30,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/register', [LoginController::class, 'register'])->name('register');
 
 
-Route::get('/inicio', function () {
+Route::get('/', function () {
     return view('inicio');
 })->name('inicio');
 

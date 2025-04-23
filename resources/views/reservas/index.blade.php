@@ -7,10 +7,8 @@
 
     {{-- Bootstrap CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     {{-- jQuery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     {{-- Bootstrap JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -32,7 +30,10 @@
         <div id="contenedor-reservas"></div>
     </div>
 
+    {{-- JS --}}
     <script>
+        const USER_ID = {{ auth()->check() ? auth()->id() : 'null' }};
+
         $(document).ready(function () {
             cargarReservas($('#datepicker').val());
 
@@ -74,7 +75,7 @@
                             color = 'warning';
                         }
 
-                        const yaUnido = partida.users.find(u => u.id === {{ auth()->id() ?? 'null' }}) !== undefined;
+                        const yaUnido = partida.users.find(u => u.id === USER_ID) !== undefined;
 
                         html += `
                             <div class="col-md-3 mb-3">
@@ -111,6 +112,11 @@
 
             // Acción del botón "Unirse"
             $(document).on('click', '.unirse-btn', function () {
+                if (!USER_ID) {
+                    window.location.href = "/login";
+                    return;
+                }
+
                 const partidaId = $(this).data('id');
 
                 $.ajax({
@@ -132,6 +138,11 @@
 
             // Acción del botón "Reservar entera"
             $(document).on('click', '.reservar-btn', function () {
+                if (!USER_ID) {
+                    window.location.href = "/login";
+                    return;
+                }
+
                 const partidaId = $(this).data('id');
 
                 $.ajax({

@@ -9,16 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
 
-    public function index()
-    {
-        // Agrupar usuarios por nivel y ordenarlos por puntos dentro de cada nivel
-        $ranking = User::orderByDesc('nivel') // Ordena primero por el nivel de mayor a menor
-                       ->orderByDesc('puntos') // Luego por los puntos de mayor a menor
-                       ->get();
 
-        // Retornamos la vista de ranking pasando los usuarios ordenados
-        return view('ranking.index', compact('ranking'));
-    }
 
 
     public function show()
@@ -26,7 +17,7 @@ class UserController extends Controller
         // Verificar si el usuario está autenticado
         $user = Auth::user();
         if (!$user) {
-            return redirect('/')->with('error', 'Debes iniciar sesión para ver el perfil');
+            return redirect('/login')->with('error', 'Debes iniciar sesión para ver el perfil');
         }
 
         return view('perfil', compact('user'));
@@ -91,6 +82,6 @@ class UserController extends Controller
         $user->delete();
 
         // Redirigir al inicio con un mensaje de éxito
-        return redirect('/inicio')->with('success', 'Usuario eliminado correctamente');
+        return redirect('/')->with('success', 'Usuario eliminado correctamente');
     }
 }

@@ -9,15 +9,16 @@ use App\Models\User;
 class AdminPartidaController extends Controller
 {
     public function __construct()
-{
-    $this->middleware(['auth', 'roles:admin']);
-}
+    {
+        $this->middleware(['auth', 'roles:admin']);
+    }
 
     public function index()
     {
-        // Mostrar solo partidas completas SIN resultado aún
+        // Mostrar solo partidas completas SIN resultado Y que NO estén reservadas enteras
         $partidas = Partida::with(['users', 'pista', 'franja'])
             ->where('completa', true)
+            ->where('reservada_entera', false) // ✅ No mostrar si fue reservada entera
             ->whereDoesntHave('users', function ($query) {
                 $query->whereNotNull('partida_user.resultado');
             })
@@ -45,7 +46,7 @@ class AdminPartidaController extends Controller
             $user->racha_victorias++;
             $user->puntos += 20;
 
-            // Límite de nivel: máximo 7
+            // Límite superior: nivel máximo 7
             if ($user->puntos >= 100) {
                 if ($user->nivel < 7) {
                     $user->nivel += 0.25;
@@ -66,7 +67,7 @@ class AdminPartidaController extends Controller
             $user->racha_victorias = 0;
             $user->puntos -= 20;
 
-            // Límite de nivel: mínimo 2.5
+            // Límite inferior: nivel mínimo 2.5
             if ($user->puntos <= 0) {
                 if ($user->nivel > 2.5) {
                     $user->nivel -= 0.25;

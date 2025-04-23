@@ -5,9 +5,10 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Models\Partida;
 
-class PartidaCerrada extends Mailable
+class PartidaCerrada extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -21,6 +22,6 @@ class PartidaCerrada extends Mailable
     public function build()
     {
         return $this->subject('🎾 ¡Tu partida está confirmada!')
-            ->view('emails.partida_cerrada');
+                    ->view('emails.partida_cerrada');
     }
 }
