@@ -4,48 +4,50 @@
     <meta charset="UTF-8">
     <title>Ranking de Jugadores - Padel Legends</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
 
     {{-- Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    {{-- Estilos personalizados --}}
+    {{-- Iconos --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    {{-- CSS personalizado --}}
     <link href="{{ asset('css/ranking.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="ranking-topbar d-flex align-items-center justify-content-between px-4 py-3 mb-4">
+
+    {{-- BARRA SUPERIOR --}}
+    <div class="ranking-topbar d-flex align-items-center justify-content-between px-4 py-3 mb-4 shadow-sm">
         {{-- Botón volver --}}
         <a href="{{ url('/') }}" id="flecha" class="d-inline-flex align-items-center justify-content-center rounded-circle border bg-white text-dark">
             <i class="bi bi-arrow-left fs-4"></i>
         </a>
 
-        {{-- Título con logo --}}
+        {{-- Logo + Título --}}
         <div class="text-center flex-grow-1">
             <img src="{{ asset('images/logo.png') }}" alt="Logo" class="ranking-logo me-2">
             <span class="fs-4 fw-bold text-white">Ranking de Jugadores</span>
         </div>
 
-        {{-- Espacio vacío para equilibrar layout --}}
+        {{-- Espacio reservado --}}
         <div style="width: 42px;"></div>
     </div>
-    <div class="container py-5">
 
-
-
+    {{-- CONTENIDO --}}
+    <div class="container py-4">
         @foreach ($niveles as $grupo)
             @php
                 $nivelRaw = number_format($grupo['nivel'], 2);
                 $nivelClase = str_replace('.', '_', rtrim(rtrim($nivelRaw, '0'), '.'));
             @endphp
 
-            <div class="ranking-card mb-4 bg-nivel-{{ $nivelClase }}">
+            <div class="ranking-card bg-nivel-{{ $nivelClase }}">
                 <div class="ranking-header">
                     Nivel {{ number_format($grupo['nivel'], 2) }}
                 </div>
 
                 <div class="table-responsive">
-                    <table class="table table-hover table-bordered ranking-table mb-0 bg-white">
+                    <table class="table table-hover table-bordered ranking-table mb-0 bg-transparent">
                         <thead>
                             <tr>
                                 <th>Jugador</th>
@@ -66,7 +68,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="5" class="text-center text-muted">
+                                    <td colspan="5" class="text-center text-muted bg-light">
                                         No hay jugadores aún en este nivel
                                     </td>
                                 </tr>
@@ -78,7 +80,7 @@
         @endforeach
     </div>
 
-    {{-- Bootstrap --}}
+    {{-- Bootstrap JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

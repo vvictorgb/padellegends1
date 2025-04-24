@@ -340,9 +340,8 @@
 
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
-                            <a href="project-detail.html">
-                                <img src="{{ asset('images/perfil.jpg') }}" class="img-fluid projects-image"
-                                    alt="">
+                            <a href="/perfil">
+                                <img src="{{ asset('images/perfil.jpg') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
                                         <small class="projects-small-title"><i class="bi-person-circle"></i></small>
@@ -358,9 +357,8 @@
 
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
-                            <a href="project-detail.html">
-                                <img src="{{ asset('images/ranking.jpg') }}" class="img-fluid projects-image"
-                                    alt="">
+                            <a href="/ranking">
+                                <img src="{{ asset('images/ranking.jpg') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
                                         <small class="projects-small-title"><i class="bi-trophy"></i></small>
@@ -377,8 +375,7 @@
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
                             <a href="https://maps.google.com?q=Padel+Club+Valencia" target="_blank">
-                                <img src="{{ asset('images/llegar.jpg') }}"
-                                    class="img-fluid projects-image projects-image-short" alt="">
+                                <img src="{{ asset('images/llegar.jpg') }}" class="img-fluid projects-image projects-image-short" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
                                         <small class="projects-small-title"><i class="bi-geo-alt-fill"></i></small>
@@ -394,9 +391,8 @@
 
                     <div class="col-lg-8 col-12">
                         <div class="projects-thumb projects-thumb-large">
-                            <a href="project-detail.html">
-                                <img src="{{ asset('images/reservar.jpg') }}"
-                                    class="img-fluid projects-image projects-image-short" alt="">
+                            <a href="/reservas">
+                                <img src="{{ asset('images/reservar.jpg') }}" class="img-fluid projects-image projects-image-short" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
                                         <small class="projects-small-title"><i class="bi-calendar-check"></i></small>
@@ -412,9 +408,8 @@
 
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
-                            <a href="project-detail.html">
-                                <img src="{{ asset('images/abiertas.jpg') }}" class="img-fluid projects-image"
-                                    alt="">
+                            <a href="/reservas">
+                                <img src="{{ asset('images/abiertas.jpg') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
                                         <small class="projects-small-title"><i class="bi-people-fill"></i></small>
@@ -431,6 +426,7 @@
                 </div>
             </div>
         </section>
+
 
 
 
